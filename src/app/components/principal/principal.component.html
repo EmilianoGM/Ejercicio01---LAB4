@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumnos</title>
+</head>
+<body>
+  <h1>Alumnos</h1>
+  <button (click)="ActivarBotonUno()">Cargar Alumno</button>
+  <button (click)="ActivarBotonDos()">Listar Alumnos</button>
+  <app-cargar-alumno (onCargar)="OnCargar($event)" *ngIf="botonUnoFlag"></app-cargar-alumno>
+  <app-listar-alumnos *ngIf="botonDosFlag" [listaAlumnos]="listaAlumnos"></app-listar-alumnos>
+</body>
+</html>
